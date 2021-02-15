@@ -1,0 +1,68 @@
+.intro {
+    background-color: $pink-color;
+    display: flex;
+    align-items: center;
+
+    &__img {
+        width:50%;
+        height: auto;
+    }
+    &__heading {
+        font-size: 48px;
+        font-weight: 900;
+        line-height: 58px;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    &__stick {
+        display: flex;
+        
+    }
+
+    &__stick:before {
+        content: url(~/../../img/stick.png);
+        }
+    
+    &__text {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38px;
+        display: block;
+        
+    }
+    
+    &__pink {
+        color: $pink-dark-color;
+    }
+}
+
+@media (max-width: $table-content) {
+    .intro {
+        &__img {
+            width: 50%;
+            height: auto;
+        }
+
+        &__heading {
+            @include font(44px, 52px, 900)
+        }
+
+        &__text {
+            @include font(24px,28px,700)
+        }
+    }
+}
+
+@media (max-width: $mobile-content) {
+    .intro {
+        height: 360px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__img {
+            display: none;
+        }
+    }
+
+}

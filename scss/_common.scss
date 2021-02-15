@@ -1,0 +1,78 @@
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
+}
+
+body {
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16px;
+}
+
+.size {
+    width: 1600px;
+    margin: 0 auto;
+}
+
+.container {
+    width: 71%;
+    margin: 0 auto;
+}
+
+
+.hide {
+    display: none;
+    position: absolute;
+}
+
+.all__intro {
+    background-color: $pink-color;
+        min-height: 150px;
+    &-header {
+        @include font(24px, 29px);
+        text-transform: uppercase;
+        padding: 60px 0 0 0;
+        color: $pink-dark-color;
+    }
+}
+
+[type="text"] {
+    @include font(13px,16px, 300);
+    display: block;
+    border: 1px solid #A4A4A4;
+    width: 360px;
+    height: 45px;
+    margin: 0 0 20px 0;
+    padding: 0 0 0 15px;
+    font-size: 13px;
+    text-align: left;
+}
+
+@media (max-width: $table-content) {
+    .container {
+        width: 91.6%;
+    }
+
+    .size {
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: $mobile-content) {
+    .container {
+        width: 91.4%;
+    }
+
+    .size {
+        width: 100%;
+    }
+}

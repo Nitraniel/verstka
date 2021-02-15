@@ -1,0 +1,145 @@
+.cart {
+    display: flex;
+
+    &__item {
+        display: flex;
+        box-shadow: 20px 20px 25px 2px $light-grey-color;
+        min-width: 650px;
+        margin: 40px 0 0 0;
+        position: relative;
+        
+        &-img {
+            width: 262px;
+            height: 306px;
+        }
+
+        &-close {
+                background-color: transparent;
+                border: none;
+                position: absolute;
+                right: 22px;
+                top: 28px;
+            }
+        &-btn {
+            background-color: transparent;
+            padding: 15px 40px;
+            text-transform: uppercase;
+            margin: 90px 0 128px 0;
+        }
+
+        &-btn2 {
+            background-color: transparent;
+            padding: 15px 40px;
+            text-transform: uppercase;
+            margin: 90px 0 128px 160px;
+        }
+        }
+
+    &__adress {
+        margin: 40px 0 0 130px; 
+        &-title {
+            @include font(16px, 19px, 300);
+            color: $black-color;
+            text-transform: uppercase;
+            margin: 0 0 25px 0;
+        }
+        &-btn {
+            text-transform: uppercase;
+            @include font(11px, 13px, 300);
+            color: $grey-color;
+            background-color: transparent;
+            width: 100px;
+            height: 35px;
+            margin: 0 0 57px 0;
+        }
+    }
+    &__list {
+        @include font(22px, 26px);
+        color: $light-black-color;
+        margin: 0 0 0 31px;
+
+        &-header {
+            margin: 22px 0 42px 0;
+            text-transform: uppercase;
+            @include font(24px, 29px);
+            color: $black-color;
+            width: 200px;
+        }
+        &-price {
+            color: $pink-dark-color;
+        }
+
+        &-count {
+            outline: 1px solid $white-gray-color;
+            margin: 0 0 0 40px;
+            padding: 0 15px;
+        }
+    }
+
+    &__total { 
+        background-color: $another-gray-color;
+        width: 360px;
+        height: 215px;
+        &-sub {
+            text-align: right;
+            padding: 39px 34px 0 0;
+            text-transform: uppercase;
+            @include font(11px, 13px);
+        }
+        &-grand {
+            text-align: right;
+            text-transform: uppercase;
+            padding: 12px 34px 0 0;
+            @include font(16px, 19px, 300);
+        }
+        &-hr {
+            width: 275px;
+            color: $ultralight-grey-color;
+            margin: 21px 0 0 44px;
+        }
+        &-btn {
+            width: 270px;
+            height: 50px;
+            background-color: $pink-dark-color;
+            color: $white-color;
+            text-align: center;
+            @include font(16px, 19px, 300);
+            border: none;
+            margin: 17px 0 0 44px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media (max-width: $table-content) {
+    .cart {
+        flex-direction: column;
+        &__adress {
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            &-title {
+                width: 100%;
+            }
+            &-form {
+                width: 50%;
+            }
+        }
+        &__total {
+            width: 50%;
+            &-hr,
+            &-btn {
+                width: 100%;
+                margin: 10px 0 0 0;
+            }
+        }
+    }
+
+    [type="text"] {
+        width: 80%;
+    }
+}
+
+@media (max-width: $mobile-content) {
+
+}
