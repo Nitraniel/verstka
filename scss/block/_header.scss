@@ -1,0 +1,160 @@
+.header {
+    background-color: $black-color;
+    position: relative;
+
+    &__logo-wrapper {
+        display: flex;
+    }
+    &__wrapper {
+        min-height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__form {
+        display: flex;
+        align-items: center;
+    }
+
+    &__search {
+        background-color: transparent;
+        border: none;
+        min-height: 30px;
+
+        &-btn:focus {
+            outline: none;
+        }
+
+        &-btn:focus + .header__search {
+            background-color: $white-color;
+        }
+        &-btn {
+            background-color: transparent;
+            border: none;
+            margin: 0 0 0 15px;
+        }
+        &-icon {
+            fill: $white-color;
+        }
+    }
+
+    &__search:focus {
+        background-color: $white-color;
+        
+    }
+
+    &__dark {
+        position: absolute;
+        width: 1600px;
+        height: 764px;
+        background-color: rgba(33,22,22,.4);
+        transform: translate( -14.3%, 104.8%);
+        bottom: 0px;
+        left: 0px;
+    }
+
+    &__navigation {
+        position: absolute;
+        background-color: $white-color;
+        bottom: 0px;
+        right: 0px;
+        height: 764px;
+        min-width: 230px;
+        transform: translate(596.2%, 104.9%);
+
+    &-menu {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17px;
+        text-align: left;
+        color: $black-color;
+        text-transform: uppercase;
+        margin: 9px 0 0 34px;
+    }
+
+    &-title {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        text-align: left;
+        color: $pink-dark-color;
+        margin: 24px 0 0 34px;
+        text-transform: uppercase;
+    }
+
+    &-link {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        text-align: left;
+        color: $light-grey-color;
+        margin: 10px 0 0 54px;
+        text-transform: uppercase;
+    }
+    &-close {
+            background-color: transparent;
+            border: none;
+            margin: 15px 0 0 200px;
+        }
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__btn {
+        background-color: transparent;
+        border: none;
+        margin: 0 0 0 33px;
+
+        &-icon {
+            fill: $ultralight-grey-color;
+        }
+
+        &-icon:hover {
+            fill: $pink-dark-color;
+        }
+    }
+}
+
+@media (max-width: $table-content) {
+    .header {
+
+        &__navigation {
+            right: 635px;
+            width: 100%;
+        }
+
+        &__dark {
+            width: 100%;
+            transform: translate(0,0);
+        }
+    }
+    
+    
+
+
+}
+
+@media (max-width: $mobile-content) {
+    .header {
+
+        &__navigation {
+            width: 100%;
+            transform: translate(433.2%, 104.9%);
+        }
+
+        &__dark {
+            width: 100%;
+            transform: translate(0,0);
+        }
+    }
+    
+    .hide_adap {
+        display: none;
+    }
+    
+    
+
+}
